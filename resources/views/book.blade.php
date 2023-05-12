@@ -88,14 +88,18 @@
 				</form>
 			</div>
 			<div class="row">
-				<h1>Total Books: {{count($books)?? ''}}</h1>
+
 				@if($search == "yes")
+				<h1> </h1>
+				<h3>
+				Total Books Found:{{count($books)?? ''}}
+				</h3>
 				<a href="{{url('/book')}}"><button type="button" class="btn btn-primary">Clear Search</button></a>
 				@foreach($books as $book)
 
 				<div class="col-12 col-md-6 col-lg-4">
 
-					<a href="/main/{{$book->id}}">
+					<a href="{{url('bookdetails/'.$book->id)}}">
 						<div class="home_card">
 							<div class="home_card_top">
 								<img src="/uploads/{{$book->image}}" alt="image">
@@ -123,11 +127,14 @@
 
 				@endforeach
 				@else
+				<h3>
+				Total Books:{{count($books)?? ''}}
+				</h3>
 				@foreach($books as $book)
 
 				<div class="col-12 col-md-6 col-lg-4">
 
-					<a href="/main/{{$book->id}}">
+					<a href="{{url('bookdetails/'.$book->id)}}">
 						<div class="home_card">
 							<div class="home_card_top">
 								<img src="/uploads/{{$book->image}}" alt="image">

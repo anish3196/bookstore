@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MainController;
+use Illuminate\Http\Request;
+use App\Models\Books;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,6 @@ use App\Http\Controllers\MainController;
 // });
 
     // Book Managment Routes
-// Route::group(['middleware' => ['checkAdmin']], function () {
 Route::post('/books/create',[BooksController::class, 'create']);
 Route::get('/books/get_books',[BooksController::class, 'get_books']);
 Route::post('/books/edit',[BooksController::class, 'edit']);
@@ -40,7 +41,6 @@ Route::post('/users/edit',[UserController::class, 'edit']);
 Route::post('/users/delete',[UserController::class, 'delete']);
 Route::post('/users/admin_login',[UserController::class, 'adminLogin']);
 
-// });
 
 
 
@@ -51,5 +51,10 @@ Route::any('/login',[UserController::class, 'index']);
 
 // for frontend work
 Route::get('/book',[MainController::class, 'bookpage']);
-Route::get('/main/{$id}',[MainController::class, 'bookdetail']);
 Route::post('/main/bookserach',[MainController::class, 'booksearch']);
+Route::get('/bookdetails/{id?}',[MainController::class, 'bookdetail']);
+
+// Route::get('/bookdetails/{$id?}', function (Request $request,$id) {
+//        $bookdetail = Books::where('id','=',$id)->get();
+//        return view('partials.booksdata',compact('bookdetail'));
+// });

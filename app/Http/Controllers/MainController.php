@@ -23,9 +23,9 @@ class MainController extends Controller
 
     public function bookdetail(Request $request,$id)
     {
-       $bookdetail = Books::where('id',$id)->first();
+       $bookdetail = Books::where('id','=',$id)->first();;
 
-       return view('bookdetail',compact('bookdetail'));
+       return view('partials.booksdata',compact('bookdetail','id'));
 
     }
 
