@@ -9,6 +9,9 @@ This Is Simple Book store project where user can see and serach for diffrent boo
 * I am including sample aql file but you can make all tables just by running command (php artisan migrate)
 ### Installation Guide
 * Clone this repository [here](https://github.com/anish3196/bookstore).
+* just import users data from db i added to project so with admin user you can login to admin 
+* useremail:- anishdubey2233@gmail.com 
+* password:- Taisan@12
 * The develop branch is the most stable branch at any given time, ensure you're working from it.
 * Run npm install and composer install to install all dependencies
 * php artisan migrate command for tables creation in database
