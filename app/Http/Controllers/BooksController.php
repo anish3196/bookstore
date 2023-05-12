@@ -121,20 +121,4 @@ class BooksController extends Controller
         return;
     }
 
-    public function bookpage()
-    {
-       $books = Books::paginate(3);
-       $booksgenre = Books::select('genre')->groupBy('genre')->get();
-
-       return view('book',compact('books','booksgenre'));
-
-    }
-
-    public function bookdetail(Request $request,$id)
-    {
-       $bookdetail = Books::where('id',$id)->first();
-
-       return view('bookdetail',compact('bookdetail'));
-
-    }
 }

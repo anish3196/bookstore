@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,5 +50,6 @@ Route::any('/login',[UserController::class, 'index']);
 
 
 // for frontend work
-Route::get('/book',[BooksController::class, 'bookpage']);
-Route::get('/book/{$id}',[BooksController::class, 'bookdetail']);
+Route::get('/book',[MainController::class, 'bookpage']);
+Route::get('/main/{$id}',[MainController::class, 'bookdetail']);
+Route::post('/main/bookserach',[MainController::class, 'booksearch']);
