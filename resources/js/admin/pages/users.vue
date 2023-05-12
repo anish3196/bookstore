@@ -93,7 +93,6 @@
 						</table>
 					</div>
 				</div>
-				 <Page :total="100" />
 
 			</div>
 		</div>
