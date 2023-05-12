@@ -7,7 +7,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-10 col-lg-8">
-				<h1>{{count($genres) ?? ''}} Books Genres Available</h1>
+				<h1 style="color:white">{{count($genres) ?? ''}} Book Genres Available</h1>
 				<div class="row">
 
 					@foreach($genres as $genre)
@@ -32,27 +32,27 @@
 			<div class="latest_post_top">
 				<h1 class="latest_post_h1 brdr_line">Latest Books</h1>
 			</div>
-			<div class="container">
-				<form action="{{url('main/bookserach')}}" method="post" class="form-inline">
+			<div class="career-filter flex career-div-fle">
+				<form action="{{url('main/bookserach')}}" method="post" class="flex">
 					@csrf
-					<div class="form-group mb-3">
-						<select class="form-select " aria-label="Default select example" name="title" id="title">
+					<div class="car-sel">
+						<select class="" name="title" id="title">
 							<option value="" selected disabled>Select Book Title</option>
 							@foreach($titles as $title)
 							<option value="{{ $title->title }}" {{isset($request->title) && $request->title!='' && $request->title==$title->title ? 'selected' : ''}}>{{ $title->title }}</option>
 							@endforeach
 						</select>
 					</div>
-					<div class="form-group mb-3">
-						<select class="form-select" aria-label="Default select example" name="author" id="author">
+					<div class="car-sel">
+						<select class=""  name="author" id="author">
 							<option value="" selected disabled>Select Book Author</option>
 							@foreach($authors as $author)
 							<option value="{{ $author->author }}" {{isset($request->author) && $request->author!='' && $request->author==$author->author ? 'selected' : ''}}>{{ $author->author }}</option>
 							@endforeach
 						</select>
 					</div>
-					<div class="form-group mb-3">
-						<select class="form-select" aria-label="Default select example" name="isbn" id="isbn">
+					<div class="car-sel">
+						<select class=""  name="isbn" id="isbn">
 
 							<option value="" selected disabled>Select Isbn</option>
 							@foreach($isbns as $isbn)
@@ -60,8 +60,8 @@
 							@endforeach
 						</select>
 					</div>
-					<div class="form-group mb-3">
-						<select class="form-select" aria-label="Default select example" name="genre" id="genre">
+					<div class="car-sel">
+						<select class=""  name="genre" id="genre">
 
 							<option value="" selected disabled>Select Gnere</option>
 							@foreach($genres as $genre)
@@ -69,8 +69,8 @@
 							@endforeach
 						</select>
 					</div>
-					<div class="form-group mb-3">
-						<select class="form-select" aria-label="Default select example" name="publisher" id="publisher">
+					<div class="car-sel">
+						<select class=""  name="publisher" id="publisher">
 
 							<option value="" selected disabled>Select publication</option>
 							@foreach($publishers as $publication)
@@ -78,13 +78,13 @@
 							@endforeach
 						</select>
 					</div>
-					<div class="form-group mb-3">
-						<input type="date" name="published" class="form-select" />
+					<div class="car-sel">
+						<input type="date" name="published" class="form-control" style="padding:23px"  />
 					</div>
-					<div class="car-sear">
-						<button type="submit" type="button" class="btn btn-primary" style="margin-left:5px">Search</button>
+					<div class="car-sel">
+						<button type="submit" type="button" class="btn btn-primary" style="margin:5px">Search</button>
 						<!--<img id="searchid" src="images/search-ic.jpg" alt="" onclick="image(this)">-->
-
+                    </div>
 				</form>
 			</div>
 			<div class="row">

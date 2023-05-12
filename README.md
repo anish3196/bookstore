@@ -13,6 +13,7 @@ This Is Simple Book store project where user can see and serach for diffrent boo
 * Run npm install and composer install to install all dependencies
 * php artisan migrate command for tables creation in database
 * When Anybody start project with "php artisan serve" it will take you to admin panel login, for accessing frontend just go to "/book" url.
+* Currently Pagination is set For more than 10 pages So pagination will appear when products are more than 10.
 ### Usage
 * Run npm run watch and php artisan serve  for starting project
 ### API Endpoints
