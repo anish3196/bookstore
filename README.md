@@ -22,16 +22,14 @@ This Is Simple Book store project where user can see and serach for diffrent boo
 |post| /books/create'| To create new Book with admin panel
 |get| /books/get_books'| to get all all data of books
 |post| /books/edit'| To edit Particulatr book
-|post| /books/delete'| for deleting book
-|post| /books/upload'| To Upload picture realted to book
-|post| /books/imagedelete'| to delte picture from databse for a particular book
-
-//user managment routes
-|post| /users/create'| For creating users
-|get| /users/get_users'| for getting all data of users
-|post| /users/edit'| For editing particualr users data
-|post| /users/delete'| For deleting user data from table
-|post| /users/admin_login'| for login for users who are authorized
+|post| /books/delete| for deleting book
+|post| /books/upload| To Upload picture realted to book
+|post| /books/imagedelete| to delte picture from databse for a particular book
+|post| /users/create| For creating users
+|get| /users/get_users| for getting all data of users
+|post| /users/edit| For editing particualr users data
+|post| /users/delete| For deleting user data from table
+|post| /users/admin_login| for login for users who are authorized
 ### Technologies Used
 
 * [Laravel](https://laravel.com/docs/9.x) aravel is a free and open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller (MVC) architectural pattern and based on Symfony.
