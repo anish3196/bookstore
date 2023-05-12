@@ -19,9 +19,9 @@ This Is Simple Book store project where user can see and serach for diffrent boo
 ### API Endpoints
 | HTTP Verbs | Endpoints | Action |
 | --- | --- | --- |
-|post| /books/create'| To create new Book with admin panel
-|get| /books/get_books'| to get all all data of books
-|post| /books/edit'| To edit Particulatr book
+|post| /books/create| To create new Book with admin panel
+|get| /books/get_books| to get all all data of books
+|post| /books/edit| To edit Particulatr book
 |post| /books/delete| for deleting book
 |post| /books/upload| To Upload picture realted to book
 |post| /books/imagedelete| to delte picture from databse for a particular book
