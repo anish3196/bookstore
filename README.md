@@ -27,7 +27,7 @@ This Is Simple Book store project where user can see and serach for diffrent boo
 |post| /books/edit| To edit Particulatr book
 |post| /books/delete| for deleting book
 |post| /books/upload| To Upload picture realted to book
-|post| /books/imagedelete| to delte picture from databse for a particular book
+|post| /books/imagedelete| to delete picture from databse for a particular book
 |post| /users/create| For creating users
 |get| /users/get_users| for getting all data of users
 |post| /users/edit| For editing particualr users data
